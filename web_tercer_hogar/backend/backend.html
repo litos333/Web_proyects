@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="backend.css">
+    <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.6.0/stitch.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <script src="backend.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="backendFrom">
+        <div class="sidebar">
+            <span class="sidebar-active">NOTICIAS</span>
+            <span class="sidebar-noactive">QUÉ HACEMOS</span>
+            <span class="sidebar-noactive">INFO MANAGE</span>
+            <span class="sidebar-noactive">INFO QUÉ HACEMOS</span>
+            <img src="..\images\iconos\tercerhogar_isotipo.svg" class="sidebarImg">
+        </div>
+        <div class="formGeneral" id="form1">
+            <div class="form-content">
+                <div class="formInput">
+                    <span>Título de la noticia</span>
+                    <input type="text" placeholder="title" id="title">
+                </div>
+                <div class="formInput">
+                    <span>Subtítulo de la noticia</span>
+                    <input type="text" placeholder="subtitle" id="subtitle">
+                </div>
+                <div class="formInput">
+                    <span id="spanTextArea">Noticia</span>
+                    <textarea id="content" cols="45" rows="12" placeholder="Write something"></textarea>
+                </div>
+                <div class="formInput">
+                    <div class="formInputComplexColumn">
+                        <div class="formComplex">
+                            <span>Fecha</span>
+                            <input type="date" id="date">
+                        </div>
+                        <div class="formComplex">
+                            <span>Enlace externo</span>
+                            <input type="url" name="" id="url" placeholder="insert URL">
+                        </div>
+                        <button onclick="addNew()" id="upload">Upload New</button>
+                    </div>
+                    <div class="formInputComplexRow">
+                        <div class="imageControl" id="divPreview">
+                            <div id="imagePreview"></div>
+                            <span id="imageTitle">Image</span>
+                        </div>
+                        <div class="imageControl">
+                            <div class="centerButtons">
+                                <label for="file" id="imageContainer interactButton">Select Image</label>
+                                <input type="file" id="file" name="file" accept="image/*">
+                                <span class="interactButton" id="clearButton">Clear Image</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="formGeneral" id="form2" style="display: none; opacity: 0;">
+            <div class="form-content">
+                <div class="formInput">
+                    <span>Título</span>
+                    <input type="text" placeholder="title" id="titleAbout">
+                </div>
+                <div class="formInput">
+                    <span>Subtítulo</span>
+                    <input type="text" placeholder="subtitle" id="subtitleAbout">
+                </div>
+                <div class="formInput">
+                    <span id="spanTextArea">Descripción</span>
+                    <textarea id="contentAbout" cols="45" rows="12" placeholder="Write something"></textarea>
+                </div>
+                <div class="formInput">
+                    <div class="formInputComplexColumn">
+                        <div class="formComplex">
+                            <span>Fecha</span>
+                            <input type="date" id="dateAbout">
+                        </div>
+                        <div class="formComplex">
+                            <span style="width: 37%;">Background color</span>
+                            <input type="color" id="backgroundAbout">
+                        </div>
+                        <div class="formComplex">
+                            <span style="width: 37%;">Text color</span>
+                            <input type="color" id="textColorAbout">
+                        </div>
+                        <button onclick="addAbout()" id="upload">Upload</button>
+                    </div> 
+                    <div class="formInputComplexRow">
+                        <div class="imageControl" id="divPreview">
+                            <div id="imagePreviewAbout"></div>
+                            <span id="imageTitleAbout">Image</span>
+                        </div>
+                        <div class="imageControl">
+                            <div class="centerButtons">
+                                <label for="fileAbout" id="interactButton">Select Image</label>
+                                <input type="file" id="fileAbout" name="fileAbout" accept="image/*">
+                                <span class="interactButton" id="clearButtonAbout">Clear Image</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div id="form3" class="displayInfo" style="display: none;"></div>
+        <div id="form4" class="displayInfo" style="display: none;"></div>
+
+    </div>
+
+
+
+</body>
+</html>
